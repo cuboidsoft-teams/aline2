@@ -27,6 +27,86 @@ body {
   font-size: 30px;
 }
 
+.stories-wrapper {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  overflow-x: auto;
+  background: #fff;
+  border-bottom: 1px solid #adb5bd;
+}
+
+.stories-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.story-item {
+  text-align: center;
+  width: 80px;
+  font-size: 13px;
+}
+
+.story-item p {
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Story Ring */
+.story-ring {
+  width: 70px;
+  height: 70px;
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  position: relative;
+}
+
+.story-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Your Story */
+.your-story {
+  background: #ddd;
+}
+
+.add-story {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background: #a855f7;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+/* Live Badge */
+.live-badge {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #ff0066, #ff9900);
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -35,22 +115,28 @@ body {
   height: 72px;
   background: #fff;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 0 18px;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* Normal icons */
 .nav-item {
-  color: #444;
+  flex: 1;
+  text-align: center;
   font-size: 22px;
-  text-decoration: none;
+  color: #444;
 }
 
-.nav-item.active {
-  color: #a855f7;
+/* Center wrapper keeps layout stable */
+.add-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
+/* Floating + button */
 .add-btn {
   width: 56px;
   height: 56px;
@@ -62,13 +148,104 @@ body {
   justify-content: center;
   font-size: 28px;
   transform: translateY(-22px);
-  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.6);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.55);
 }
 
+/* Profile avatar */
 .profile img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.post-card {
+  max-width: 420px;
+  margin: 8px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Header */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-meta {
+  font-size: 12px;
+  color: #777;
+}
+
+.follow-btn {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+/* Image */
+.post-image img {
+  width: 100%;
+  height: 279px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Actions */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  align-items: center;
+}
+
+.action-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.like {
+  background: #fde7f3;
+  color: #d946ef;
+}
+
+.comment {
+  background: #e0f2fe;
+  color: #2563eb;
+}
+
+.post-actions i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Caption */
+.post-caption {
+  padding: 0 14px 14px;
+  font-size: 14px;
+}
+
+.liked-text {
+  color: #666;
+  margin-bottom: 4px;
 }/*# sourceMappingURL=style.css.map */

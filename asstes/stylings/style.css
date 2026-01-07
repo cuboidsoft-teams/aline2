@@ -25,4 +25,50 @@ body {
 
 .bell-icon {
   font-size: 30px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-item {
+  color: #444;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.nav-item.active {
+  color: #a855f7;
+}
+
+.add-btn {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  color: #fff;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  transform: translateY(-22px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.6);
+}
+
+.profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

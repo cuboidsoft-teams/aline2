@@ -1,3 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Poppins", sans-serif !important;
+}
+
+.logo-gred {
+  color: transparent;
+  background-color: transparent;
+  background: linear-gradient(45deg, #BB30EB, #7178F4);
+  -webkit-background-clip: text;
+  font-size: 22px;
+}
+
+.aline-bg-primary {
+  background-color: #BB30EB !important;
+}
+
+.aline-bg-primary-2 {
+  background-color: #7178F4 !important;
+}
+
+.bell-icon {
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */

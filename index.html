@@ -115,7 +115,7 @@
                 <img src="https://i.pravatar.cc/100?img=32" class="avatar">
                 <div>
                     <span class="post-username">
-                    <strong>@aliaabhatt</strong>
+                        <strong>@aliaabhatt</strong>
                     </span>
                     <div class="post-meta">Bangkok, Thailand · 2m ago</div>
                 </div>
@@ -188,9 +188,11 @@
 
         <div class="post-actions">
             <div class="d-flex gap-3">
-                <span class="action-pill like">
-                    <i class="bi bi-heart"></i> 1.2K
-                </span>
+               <span class="action-pill like" data-liked="false">
+                        <i class="bi bi-heart"></i>
+                        <span class="like-count">288</span>
+                        </span>
+
                 <span class="action-pill comment">
                     <i class="bi bi-chat-dots"></i> 342
                 </span>
@@ -214,7 +216,6 @@
                 <b>ranveersingh</b> chasing sunsets & good vibes ✨🔥
             </p>
         </div>
-
     </div>
 
 
@@ -236,6 +237,101 @@
         </a>
     </div>
 
+    <div class="sheet-backdrop" id="sheetBackdrop"></div>
+    <div class="comment-sheet " id="commentSheet">
+
+        <!-- Header -->
+        <div class="sheet-header">
+            <span></span>
+            <strong>Comments</strong>
+            <i class="bi bi-send"></i>
+        </div>
+
+        <!-- Comments Body -->
+        <div class="sheet-body">
+
+            <!-- Comment Item -->
+            <div class="comment-item">
+                <img src="https://i.pravatar.cc/40?img=11" class="comment-avatar">
+                <div class="comment-content">
+                    <p>
+                        <b>ashhaffwags</b> Where is this ? Can the public view it?
+                        It’s unbelievably beautiful
+                    </p>
+                    <div class="comment-meta">
+                        <span>6d</span>
+                        <span>Reply</span>
+                    </div>
+                </div>
+                <div class="comment-like">
+                    <i class="bi bi-heart"></i>
+                    <small>80</small>
+                </div>
+            </div>
+
+            <div class="view-replies">View 4 more replies</div>
+
+            <!-- Comment Item -->
+            <div class="comment-item">
+                <img src="https://i.pravatar.cc/40?img=22" class="comment-avatar">
+                <div class="comment-content">
+                    <p><b>towstudios</b> Where is this? Its amazing</p>
+                    <div class="comment-meta">
+                        <span>6d</span>
+                        <span>Reply</span>
+                    </div>
+                </div>
+                <div class="comment-like">
+                    <i class="bi bi-heart"></i>
+                    <small>10</small>
+                </div>
+            </div>
+
+            <!-- Comment Item -->
+            <div class="comment-item">
+                <img src="https://i.pravatar.cc/40?img=33" class="comment-avatar">
+                <div class="comment-content">
+                    <p>
+                        <b>challan_cat</b>
+                        <span class="author-like">❤️ by author</span><br>
+                        This reminds me of the airport in Madrid…
+                    </p>
+                    <div class="comment-meta">
+                        <span>3d</span>
+                        <span>Reply</span>
+                    </div>
+                </div>
+                <div class="comment-like">
+                    <i class="bi bi-heart"></i>
+                    <small>4</small>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Emoji Bar -->
+        <div class="emoji-bar">
+            ❤️ 🙌 🔥 👏 😢 😍 😮 😂
+        </div>
+
+        <!-- Input -->
+        <div class="sheet-footer">
+            <img src="https://i.pravatar.cc/35?img=5" class="comment-avatar">
+            <input type="text" placeholder="Add a comment…">
+            <button class="post-btn">Post</button>
+        </div>
+
+    </div>
+
+
+    <audio id="likeSound" preload="auto">
+  <source src="https://assets.mixkit.co/active_storage/sfx/3005/3005-preview.mp3" type="audio/mpeg">
+</audio>
+
+
+
+    <script src="./asstes/js/bottomsheet.js"></script>
+    <script src="./asstes/js/likebtn.js"></script>
 </body>
 
 </html>

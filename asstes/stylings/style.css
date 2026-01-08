@@ -34,7 +34,7 @@ body {
   padding-bottom: 0;
   overflow-x: auto;
   background: #fff;
-  border-bottom: 1px solid #adb5bd;
+  border-bottom: 1px solid rgba(173, 181, 189, 0.3019607843);
 }
 
 .stories-wrapper::-webkit-scrollbar {
@@ -403,4 +403,81 @@ body {
   100% {
     transform: scale(1);
   }
+}
+/* Section */
+.featured-section {
+  padding: 10px 0;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Horizontal Scroll */
+.featured-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.featured-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.featured-scroll::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+/* Card */
+.featured-card {
+  min-width: 300px;
+  padding: 10px;
+  font-size: 12px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Avatar */
+.featured-card .avatar {
+  width: 34px;
+  height: 34px;
+}
+
+/* Username */
+.featured-card strong {
+  font-size: 12.5px;
+}
+
+/* Meta */
+.featured-card .post-meta {
+  font-size: 10.5px;
+  color: #777;
+}
+
+/* Bio */
+.featured-card .post-caption {
+  font-size: 11.5px;
+  line-height: 1.4;
+  margin: 6px 0;
+}
+
+/* Button */
+.featured-card .btn {
+  font-size: 10.5px;
+  padding: 3px 8px;
+}
+
+/* Like / Comment */
+.featured-card .action-pill {
+  font-size: 10.5px;
+  padding: 3px 7px;
+}
+
+.seller {
+  width: 68px;
 }/*# sourceMappingURL=style.css.map */

@@ -252,4 +252,9 @@ body {
 .liked-text {
   color: #666;
   margin-bottom: 4px;
+}
+
+.btn-sm {
+  font-size: 11px !important;
+  padding: 2px 14px !important;
 }/*# sourceMappingURL=style.css.map */

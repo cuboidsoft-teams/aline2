@@ -159,13 +159,13 @@ body{
 }
 
 .post-card {
-  max-width: 420px;
-  margin: 8px auto;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-  overflow: hidden;
-
+    max-width: 420px;
+    margin: 8px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 95%;
 }
 
 /* Header */
@@ -384,7 +384,7 @@ body{
 }
 
 .action-pill.like.active i {
-  color: red;
+  color: #BB30EB;
   animation: pop .2s ease;
 }
 

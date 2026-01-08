@@ -308,7 +308,6 @@
 
 
     <div class="post-card">
-
         <!-- Header -->
         <div class="post-header">
             <div class="d-flex align-items-center gap-2">
@@ -367,19 +366,23 @@
 
     <div class="bottom-nav">
         <a class="nav-item" href="#"><i class="bi bi-house"></i></a>
-        <!-- <a class="nav-item" href="#"><i class="bi bi-search"></i></a> -->
         <a class="nav-item" href="#"><i class="bi bi-play-circle"></i></a>
 
         <div class="add-wrapper">
-            <a class="add-btn" href="#"><i class="bi bi-plus-lg"></i></a>
+            <button class="add-btn border-0" onclick="openGallery()">
+                <i class="bi bi-plus-lg"></i>
+            </button>
         </div>
-
 
         <a class="nav-item" href="#"><i class="bi bi-chat-dots"></i></a>
         <a class="nav-item profile" href="#">
             <img src="https://i.pravatar.cc/40" alt="profile">
         </a>
     </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="galleryInput" accept="image/*,video/*" style="display:none">
+
 
     <div class="sheet-backdrop" id="sheetBackdrop"></div>
     <div class="comment-sheet " id="commentSheet">
@@ -476,6 +479,12 @@
 
     <script src="./asstes/js/bottomsheet.js"></script>
     <script src="./asstes/js/likebtn.js"></script>
+    <script>
+function openGallery() {
+    document.getElementById('galleryInput').click();
+}
+</script>
+
 </body>
 
 </html>

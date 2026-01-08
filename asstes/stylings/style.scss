@@ -377,8 +377,6 @@ body{
   visibility: visible;
 }
 
-
-
 .action-pill.like {
   cursor: pointer;
 }
@@ -417,7 +415,6 @@ body{
     padding-bottom: 8px;
     scroll-snap-type: x mandatory;
     margin-left: 8px;
-
 }
 
 .featured-scroll::-webkit-scrollbar {
@@ -481,16 +478,16 @@ body{
 }
 
 
-.gold-shiny {
-      background: linear-gradient(
-        135deg,
-        #ffffff 0%,
-        #fff8e1 30%,
-        #ffeb3b 60%,
-        #ffd54f 100%
-    );
-    color: #5c4700;
-}
+// .gold-shiny {
+//       background: linear-gradient(
+//         135deg,
+//         #ffffff 0%,
+//         #fff8e1 30%,
+//         #ffeb3b 60%,
+//         #ffd54f 100%
+//     );
+//     color: #5c4700;
+// }
 
 .gold-shiny::after {
     content: "";

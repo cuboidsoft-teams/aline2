@@ -1066,4 +1066,36 @@ textarea {
 /* Swiped state */
 .chat-swipe.active .chat-item {
   transform: translateX(-180px);
+}
+
+/* ===============================
+   CHAT HEADER
+================================ */
+.chat-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Search Button */
+.chat-search-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
+  background: #f3f1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chat-search-btn i {
+  font-size: 16px;
+  color: #7b3fe4;
 }/*# sourceMappingURL=style.css.map */

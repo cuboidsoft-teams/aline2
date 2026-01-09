@@ -934,6 +934,55 @@ textarea {
   background: #f1ecff;
 }
 
+.chat-tabs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.chat-tab {
+  font-size: 12px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 6px 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.chat-tab.active {
+  color: #7b3fe4;
+  font-weight: 600;
+}
+
+.chat-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background: #7b3fe4;
+  border-radius: 10px;
+}
+
+/* PLUS BUTTON */
+.add-tab {
+  margin-left: auto;
+  font-size: 16px;
+  color: #7b3fe4;
+  padding: 4px 6px;
+}
+
+.add-tab:hover {
+  background: #f1ecff;
+  border-radius: 50%;
+}
+
 /* status text */
 .story-item small {
   display: block;
@@ -961,4 +1010,59 @@ textarea {
 /* Your story */
 .story-ring.your-story {
   border: 2px solid #7b3fe4;
+}
+
+.chat-swipe {
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-item {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 6px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease;
+}
+
+/* Swipe actions container */
+.swipe-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+}
+
+/* Action buttons */
+.swipe-actions .action {
+  width: 60px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.action.archive {
+  background: #5c6bc0;
+}
+
+.action.mute {
+  background: #ffa726;
+}
+
+.action.delete {
+  background: #ef5350;
+}
+
+/* Swiped state */
+.chat-swipe.active .chat-item {
+  transform: translateX(-180px);
 }/*# sourceMappingURL=style.css.map */

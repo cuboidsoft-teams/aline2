@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <div class="top-playground pb-2">
+    <div class="top-playground">
         <header>
             <div class="container">
                 <div class="row align-items-center justify-content-center">
@@ -176,7 +176,6 @@
 
         <!-- Caption -->
         <div class="post-caption">
-
             <!-- Liked By Bubble -->
             <div class="liked-pill">
                 <div class="liked-avatars">
@@ -226,24 +225,39 @@
                 </div>
 
                 <div class="post-actions">
-                    <div class="d-flex gap-3">
-                        <span class="action-pill like" data-liked="false">
-                            <i class="bi bi-heart"></i>
-                            <span class="like-count">288</span>
-                        </span>
+            <!-- Left Actions -->
+            <div class="action-group">
+                <span class="action-pill like">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <span>6,525</span>
+                </span>
 
-                        <span class="action-pill comment">
-                            <i class="bi bi-chat-dots"></i> 342
-                        </span>
-                    </div>
+                <!-- <span class="action-pill dislike">
+                    <i class="bi bi-hand-thumbs-down"></i>
+                    <span>23</span>
+                </span> -->
 
-                    <!-- Right Actions -->
-                    <div class="d-flex align-items-center gap-3 save-wrapper">
-                        <i class="bi bi-send"></i>
-                        <i class="bi bi-bookmark save-icon"></i>
-                        <i class="bi bi-download"></i>
-                    </div>
-                </div>
+                <span class="action-pill comment">
+                    <i class="bi bi-chat"></i>
+                    <span>23</span>
+                </span>
+
+                <span class="action-pill share">
+                    <i class="bi bi-send"></i>
+                    <span>23</span>
+                </span>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="action-group">
+                <span class="icon-btn">
+                    <i class="bi bi-bookmark"></i>
+                </span>
+                <span class="icon-btn">
+                    <i class="bi bi-download"></i>
+                </span>
+            </div>
+        </div>
 
             </div>
 
@@ -271,24 +285,39 @@
                 </div>
 
                 <div class="post-actions">
-                    <div class="d-flex gap-3">
-                        <span class="action-pill like" data-liked="false">
-                            <i class="bi bi-heart"></i>
-                            <span class="like-count">288</span>
-                        </span>
+            <!-- Left Actions -->
+            <div class="action-group">
+                <span class="action-pill like">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <span>6,525</span>
+                </span>
 
-                        <span class="action-pill comment">
-                            <i class="bi bi-chat-dots"></i> 342
-                        </span>
-                    </div>
+                <!-- <span class="action-pill dislike">
+                    <i class="bi bi-hand-thumbs-down"></i>
+                    <span>23</span>
+                </span> -->
 
-                    <!-- Right Actions -->
-                    <div class="d-flex align-items-center gap-3 save-wrapper">
-                        <i class="bi bi-send"></i>
-                        <i class="bi bi-bookmark save-icon"></i>
-                        <i class="bi bi-download"></i>
-                    </div>
-                </div>
+                <span class="action-pill comment">
+                    <i class="bi bi-chat"></i>
+                    <span>23</span>
+                </span>
+
+                <span class="action-pill share">
+                    <i class="bi bi-send"></i>
+                    <span>23</span>
+                </span>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="action-group">
+                <span class="icon-btn">
+                    <i class="bi bi-bookmark"></i>
+                </span>
+                <span class="icon-btn">
+                    <i class="bi bi-download"></i>
+                </span>
+            </div>
+        </div>
             </div>
 
             <!-- CARD 3 -->
@@ -315,24 +344,39 @@
                 </div>
 
                 <div class="post-actions">
-                    <div class="d-flex gap-3">
-                        <span class="action-pill like" data-liked="false">
-                            <i class="bi bi-heart"></i>
-                            <span class="like-count">288</span>
-                        </span>
+            <!-- Left Actions -->
+            <div class="action-group">
+                <span class="action-pill like">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <span>6,525</span>
+                </span>
 
-                        <span class="action-pill comment">
-                            <i class="bi bi-chat-dots"></i> 342
-                        </span>
-                    </div>
+                <!-- <span class="action-pill dislike">
+                    <i class="bi bi-hand-thumbs-down"></i>
+                    <span>23</span>
+                </span> -->
 
-                    <!-- Right Actions -->
-                    <div class="d-flex align-items-center gap-3 save-wrapper">
-                        <i class="bi bi-send"></i>
-                        <i class="bi bi-bookmark save-icon"></i>
-                        <i class="bi bi-download"></i>
-                    </div>
-                </div>
+                <span class="action-pill comment">
+                    <i class="bi bi-chat"></i>
+                    <span>23</span>
+                </span>
+
+                <span class="action-pill share">
+                    <i class="bi bi-send"></i>
+                    <span>23</span>
+                </span>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="action-group">
+                <span class="icon-btn">
+                    <i class="bi bi-bookmark"></i>
+                </span>
+                <span class="icon-btn">
+                    <i class="bi bi-download"></i>
+                </span>
+            </div>
+        </div>
             </div>
 
         </div>
@@ -416,7 +460,6 @@
         </div>
 
     </div>
-
 
 
     <div class="bottom-nav">
@@ -556,6 +599,9 @@
     </div>
 
 
+
+
+
     <audio id="likeSound" preload="auto">
         <source src="https://assets.mixkit.co/active_storage/sfx/3005/3005-preview.mp3" type="audio/mpeg">
     </audio>
@@ -585,8 +631,6 @@
             }
         });
     </script>
-
-
 
 </body>
 

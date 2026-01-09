@@ -573,3 +573,31 @@ body{
     font-size: 13px;
     color: #666;
 }
+
+.feed-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 8px 10px;
+    overflow-x: auto;
+}
+
+.feed-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    padding: 5px 12px;          /* 👈 smaller button */
+    border-radius: 16px;        /* 👈 tighter pill */
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 12px;            /* 👈 smaller font */
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tab.active {
+    background: #6f2dbd;
+    color: #fff;
+    border-color: #6f2dbd;
+}

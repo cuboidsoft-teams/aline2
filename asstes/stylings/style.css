@@ -267,18 +267,44 @@ body {
 
 /* Caption */
 .post-caption {
-  padding: 0 14px 14px;
+  padding: 6px 12px 10px;
+}
+
+/* Liked bubble */
+.liked-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #f1f1f1;
+  border-radius: 18px;
+  font-size: 11px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Avatars */
+.liked-avatars {
+  display: flex;
+}
+
+.liked-avatars img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #f1f1f1;
+  margin-left: -6px;
+}
+
+.liked-avatars img:first-child {
+  margin-left: 0;
+}
+
+/* Caption */
+.caption-text {
   font-size: 12px;
-}
-
-.liked-text {
-  color: #666;
-  margin-bottom: 4px;
-}
-
-.btn-sm {
-  font-size: 11px !important;
-  padding: 2px 14px !important;
+  color: #222;
+  margin: 0;
 }
 
 /* ---------- COMMENT SHEET ---------- */

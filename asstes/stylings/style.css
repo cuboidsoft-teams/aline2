@@ -502,4 +502,63 @@ body {
 .connect {
   font-size: 14px !important;
   font-weight: bold !important;
+}
+
+.post-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: flex-end;
+  z-index: 999;
+}
+.post-modal .modal-content {
+  background-color: white;
+}
+
+.post-modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 15px;
+}
+
+.handle {
+  width: 40px;
+  height: 4px;
+  background: #ccc;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+}
+
+.option {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #f5f5f5;
+}
+
+.option i {
+  font-size: 22px;
+  color: #6f2dbd;
+}
+
+.option h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.option p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
 }/*# sourceMappingURL=style.css.map */

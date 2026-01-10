@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aline2</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="asstes/stylings/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="top-playground top-0 position-sticky bg-white">
+
+       <header class="profile-header">
+    <div class="profile-header-inner d-flex align-items-center justify-content-between">
+
+        <!-- LEFT -->
+        <div class="d-flex align-items-center gap-2">
+
+            <button class="icon-btn">
+                <a href="profile.html" class="text-dark">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+            </button>
+
+            <div class="profile-title">
+
+                <h6 class="mb-0 fw-semibold">
+                    Rohit Sharma
+                    <i class="bi bi-patch-check-fill text-primary"></i>
+                </h6>
+
+                <!-- VERIFIED SELLER BADGE -->
+                <small class="text-muted d-flex align-items-center gap-1"
+                       style="font-size:11px;">
+                    <i class="bi bi-shield-check"
+                       style="color:#BB30EB;"></i>
+                    He is a verified seller
+                </small>
+
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="d-flex align-items-center gap-2">
+
+            <!-- Search -->
+            <button class="icon-btn">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <!-- Chat Menu -->
+            <div class="dropdown">
+                <button class="icon-btn" data-bs-toggle="dropdown">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end mobile-menu shadow border-0">
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-trash me-2"></i> Clear chat
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-image me-2"></i> Wallpaper
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-bell-slash me-2"></i> Mute notifications
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-archive me-2"></i> Archive chat
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item text-danger" href="#">
+                            <i class="bi bi-slash-circle me-2"></i> Block contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+
+
+    </div>
+
+
+    <div class="container py-3 chat-wrapper">
+
+        <!-- MESSAGE : SENT -->
+        <div class="d-flex justify-content-end mb-3">
+            <div class="chat-bubble sent">
+                Hi Abiola, any progress on the project? We need a link for standup.
+                <div class="chat-time text-end">1 day ago</div>
+            </div>
+        </div>
+
+        <!-- MESSAGE : RECEIVED -->
+        <div class="d-flex justify-content-start mb-3">
+            <div class="chat-bubble received">
+                Hi Demola! <br>
+                Yes, I just finished developing the "Chat" template.
+                <div class="chat-time">1 day ago</div>
+            </div>
+        </div>
+
+        <!-- FILE MESSAGE -->
+        <div class="d-flex justify-content-start mb-3">
+            <div class="file-card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>Job Description.docx</strong>
+                        <div class="file-size">487 KB</div>
+                    </div>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+
+                <button class="btn download-btn w-100 mt-2">
+                    Download <i class="bi bi-download ms-1"></i>
+                </button>
+
+                <div class="chat-time mt-1">2 min ago</div>
+            </div>
+        </div>
+
+        <!-- MESSAGE : RECEIVED -->
+        <div class="d-flex justify-content-start mb-3">
+            <div class="chat-bubble received">
+                Hello Demola, <br>
+                What job role is this document for?
+                <div class="chat-time">1 min ago</div>
+            </div>
+        </div>
+
+        <!-- MESSAGE : SENT -->
+        <div class="d-flex justify-content-end mb-5">
+            <div class="chat-bubble sent">
+                Technical Project Manager role. Hybrid, 3 days on site a week.
+                <div class="chat-time text-end">1 min ago</div>
+            </div>
+        </div>
+
+        <!-- INPUT BOX -->
+        <!-- INPUT BOX -->
+<div class="chat-input d-flex align-items-center">
+    <button class="btn icon-btn">
+        <i class="bi bi-plus"></i>
+    </button>
+
+    <input type="text"
+           class="form-control mx-2"
+           placeholder="Ok great, Let me ask around"
+           disabled>
+
+    <button class="btn send-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#premiumChatModal">
+        <i class="bi bi-send-fill"></i>
+    </button>
+</div>
+
+
+    </div>
+
+
+
+<!-- PREMIUM CHAT MODAL -->
+<div class="modal fade" id="premiumChatModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content border-0 shadow-lg rounded-4">
+
+            <div class="modal-body text-center p-4">
+
+                <div class="mb-3">
+                    <i class="bi bi-lock-fill"
+                       style="font-size:28px;color:#BB30EB;"></i>
+                </div>
+
+                <h6 class="fw-semibold mb-2">
+                    Premium Chat
+                </h6>
+
+                <p class="small text-muted mb-4">
+                    This is a premium chat.<br>
+                    Please buy a subscription to continue messaging.
+                </p>
+
+                <button class="btn w-100 text-white mb-2"
+                        style="background:#BB30EB;border-radius:12px;">
+                    Buy Subscription
+                </button>
+
+                <button class="btn btn-light w-100"
+                        data-bs-dismiss="modal"
+                        style="border-radius:12px;">
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var premiumModal = new bootstrap.Modal(
+            document.getElementById('premiumChatModal')
+        );
+        premiumModal.show();
+    });
+</script>
+
+    <script src="./asstes/js/bottomsheet.js"></script>
+    <script src="./asstes/js/likebtn.js"></script>
+    <script>
+        function openPostOptions() {
+            document.getElementById('postModal').classList.add('show');
+        }
+
+        function selectType(type) {
+            console.log("Selected:", type);
+
+            document.getElementById('postModal').classList.remove('show');
+
+            // Open gallery AFTER selecting type
+            document.getElementById('galleryInput').click();
+        }
+
+        // Close modal on outside click
+        document.getElementById('postModal').addEventListener('click', e => {
+            if (e.target.classList.contains('post-modal')) {
+                e.target.classList.remove('show');
+            }
+        });
+    </script>
+    <script>
+        function selectType(type) {
+            document.getElementById('postModal').classList.remove('show');
+
+            if (type === 'post') {
+                document.getElementById('createPost').classList.add('show');
+            }
+        }
+
+        function closeCreatePost() {
+            document.getElementById('createPost').classList.remove('show');
+        }
+
+        function enablePostBtn(el) {
+            const btn = document.getElementById('postBtn');
+            if (el.value.trim().length > 0) {
+                btn.classList.remove('disabled');
+            } else {
+                btn.classList.add('disabled');
+            }
+        }
+    </script>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+        const slider = document.querySelector('.tab-slider');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+
+                slider.style.left = index * 50 + '%';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

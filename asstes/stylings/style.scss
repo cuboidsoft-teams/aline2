@@ -762,7 +762,7 @@ textarea {
 .text-primary { color: #4c8bf5; }
 .text-info { color: #00bcd4; }
 .text-success { color: #2ecc71; }
-.text-danger { color: #e74c3c; }
+.text-danger { color: #BB30EB; }
 .text-warning { color: #f39c12; }
 .text-purple { color: #8e44ad; }
 
@@ -1376,7 +1376,7 @@ textarea {
 .edit-profile-btn {
     flex: 1.2;
     padding: 8px 10px;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
     background: #fff;
@@ -1622,3 +1622,131 @@ textarea {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.viewer-actions{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.follow-btn{
+    background:#BB30EB;
+    color:#fff;
+    border:none;
+   padding: 8px 24px;
+    font-size: 12px;
+    border-radius:10px;
+}
+
+.contact-btn,
+.share-btn{
+    background:#f2f2f2;
+    border:none;
+    padding: 8px 10px;
+    border-radius:10px;
+    font-size:12px;
+}
+
+.contact-menu{
+    border-radius:12px;
+    padding:6px;
+}
+
+.contact-menu .dropdown-item{
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.chat-wrapper{
+    max-width:420px;
+    background:#f8f9fd;
+    border-radius:20px;
+    padding-bottom:80px;
+    background-image: url("https://img.freepik.com/free-vector/abstract-chat-box-shape-pattern-white-background_1017-59690.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CHAT BUBBLES */
+.chat-bubble{
+    max-width:75%;
+    padding:12px 14px;
+    font-size:14px;
+    line-height:1.4;
+    border-radius:16px;
+}
+
+.sent{
+    background:#BB30EB;
+    color:#fff;
+    border-bottom-right-radius:6px;
+}
+
+.received{
+    background:#ffffff;
+    color:#333;
+    border-bottom-left-radius:6px;
+}
+
+/* TIME */
+.chat-time{
+    font-size:11px;
+    color:#999;
+    margin-top:4px;
+}
+
+/* FILE CARD */
+.file-card{
+    background:#fdecec;
+    padding:14px;
+    border-radius:14px;
+    width:75%;
+}
+
+.file-size{
+    font-size:12px;
+    color:#BB30EB;
+}
+
+.download-btn{
+    background:#BB30EB;
+    color:#fff;
+    border-radius:10px;
+    font-size:14px;
+}
+
+/* INPUT */
+.chat-input{
+  position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 10px;
+    /* border-radius: 14px; */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input input{
+    border-radius:20px;
+    font-size:14px;
+}
+
+.icon-btn{
+    border-radius:50%;
+    width:40px;
+    height:40px;
+}
+
+.send-btn{
+    background:#BB30EB;
+    color:#fff;
+    border-radius:50%;
+    width:42px;
+    height:42px;
+}
+

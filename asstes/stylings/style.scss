@@ -1218,19 +1218,27 @@ textarea {
 /* Stats */
 .profile-stats {
     display: flex;
-    justify-content: space-around;
-    padding: 14px 0;
-}
-.profile-stats div {
+    justify-content: center;
+    gap: 26px;              /* reduced spacing */
+    padding: 10px 0 6px;    /* less vertical space */
     text-align: center;
 }
-.profile-stats strong {
-    font-size: 16px;
-    display: block;
+
+.stat-item {
+    min-width: 60px;
 }
-.profile-stats span {
-    font-size: 12px;
-    color: #777;
+
+.stat-item strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+}
+
+.stat-item span {
+    font-size: 11px;
+    color: #888;
 }
 
 /* Tabs */

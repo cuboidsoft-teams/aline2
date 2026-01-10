@@ -622,11 +622,14 @@ body {
 }
 
 .tab {
-  padding: 5px 12px; /* 👈 smaller button */
-  border-radius: 16px; /* 👈 tighter pill */
+  padding: 5px 12px;
+  /* 👈 smaller button */
+  border-radius: 16px;
+  /* 👈 tighter pill */
   border: 1px solid #ddd;
   background: #fff;
-  font-size: 12px; /* 👈 smaller font */
+  font-size: 12px;
+  /* 👈 smaller font */
   color: #333;
   cursor: pointer;
   white-space: nowrap;
@@ -1247,8 +1250,10 @@ textarea {
 .profile-stats {
   display: flex;
   justify-content: center;
-  gap: 26px; /* reduced spacing */
-  padding: 10px 0 6px; /* less vertical space */
+  gap: 26px;
+  /* reduced spacing */
+  padding: 10px 0 6px;
+  /* less vertical space */
   text-align: center;
 }
 
@@ -1759,7 +1764,8 @@ textarea {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   background: #000;
-  padding-bottom: 70px; /* fixed bottom menu space */
+  padding-bottom: 70px;
+  /* fixed bottom menu space */
 }
 
 .reel {
@@ -1828,7 +1834,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   font-size: 12px;
-  color: #fff;
+  color: black;
   cursor: pointer;
 }
 .reel .action-pill i {
@@ -1853,7 +1859,7 @@ textarea {
   }
 }
 .reel .action-pill.comment.glow i {
-  color: #ffffff;
+  color: black;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 .reel .reel-info {
@@ -1973,7 +1979,8 @@ textarea {
 }
 
 .app-auth-btn-primary {
-  background: #BB30EB; /* YOUR APP COLOR */
+  background: #BB30EB;
+  /* YOUR APP COLOR */
   color: #ffffff;
   border: none;
 }

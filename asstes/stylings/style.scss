@@ -1615,3 +1615,10 @@ textarea {
     color: #BB30EB;
     font-weight: 600;
 }
+
+.bio-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

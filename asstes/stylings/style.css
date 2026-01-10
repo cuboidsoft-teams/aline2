@@ -1161,7 +1161,7 @@ textarea {
 .profile-avatar {
   width: 80px;
   height: 80px;
-  margin: 18px auto 8px;
+  margin: 12px auto 8px;
   padding: 3px;
   border-radius: 50%;
   background: linear-gradient(135deg, #7b3fe4, #d946ef);

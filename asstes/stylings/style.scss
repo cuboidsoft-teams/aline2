@@ -1909,3 +1909,83 @@ textarea {
 
 }
 
+.icon-badge {
+    width: 32px;
+    height: 32px;
+    background: rgba(187,48,235,0.15);
+    color: #BB30EB;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.social-btn {
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    background: #fff;
+}
+
+.modal-content {
+    padding-bottom: 10px;
+}
+/* BACKDROP */
+.modal-backdrop.show {
+    opacity: 0.4;
+}
+
+/* BOTTOM SHEET */
+.app-bottom-modal .modal-dialog {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.app-bottom-modal .modal-content {
+    border-radius: 18px 18px 0 0;
+    padding: 18px;
+    border: none;
+}
+
+/* HANDLE */
+.app-sheet-handle {
+    width: 44px;
+    height: 5px;
+    background: #d1d5db;
+    border-radius: 10px;
+    margin: 0 auto 14px;
+}
+
+/* BUTTONS */
+.app-auth-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.app-auth-btn-primary {
+    background: #BB30EB; /* YOUR APP COLOR */
+    color: #ffffff;
+    border: none;
+}
+
+/* ICON SIZE */
+.app-auth-btn i {
+    font-size: 18px;
+}

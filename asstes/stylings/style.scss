@@ -582,6 +582,7 @@ body{
     width: 100%;
     border-radius: 20px 20px 0 0;
     padding: 15px;
+    top: -71px;
 }
 
 .handle {
@@ -1098,4 +1099,193 @@ textarea {
 .chat-search-btn i {
     font-size: 16px;
     color: #7b3fe4;
+}
+
+
+
+/* ===============================
+   PROFILE HEADER
+================================ */
+.profile-header {
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-header-inner {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+}
+
+/* Icons */
+.icon-btn {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.icon-btn i {
+    font-size: 20px;
+    color: #111;
+}
+
+/* Profile title */
+.profile-title {
+    text-align: center;
+    flex: 1;
+}
+
+.profile-title h5 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+}
+
+/* Status */
+.profile-title .status {
+    font-size: 11px;
+    color: #999;
+}
+
+.profile-title .status.online {
+    color: #2ecc71;
+}
+
+
+.profile-page {
+    background: #fff;
+    font-family: system-ui, sans-serif;
+}
+
+/* Avatar */
+.profile-avatar {
+    width: 96px;
+    height: 96px;
+    margin: 18px auto 8px;
+    padding: 3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7b3fe4, #d946ef);
+}
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+/* Name */
+.profile-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0;
+}
+.verified {
+    color: #7b3fe4;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+/* Bio */
+.profile-bio {
+    padding: 0 20px;
+    font-size: 13px;
+    color: #555;
+}
+.profile-bio a {
+    display: block;
+    margin-top: 2px;
+    color: #7b3fe4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Edit Button */
+.edit-profile-btn {
+    margin: 12px auto;
+    display: block;
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+}
+.profile-stats div {
+    text-align: center;
+}
+.profile-stats strong {
+    font-size: 16px;
+    display: block;
+}
+.profile-stats span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Tabs */
+.profile-tabs {
+    position: relative;
+    display: flex;
+    background: #f3f3f3;
+    border-radius: 20px;
+    margin: 0 16px;
+}
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    z-index: 1;
+}
+.tab-btn.active {
+    color: #fff;
+}
+.tab-slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #d946ef;
+    border-radius: 20px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+/* Content */
+.tab-content-wrapper {
+    overflow: hidden;
+}
+.tab-content {
+    display: none;
+    padding: 10px;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+.grid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 6px;
 }

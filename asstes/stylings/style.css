@@ -1767,22 +1767,31 @@ textarea {
   scroll-snap-align: start;
   overflow: hidden;
   background: #000;
+  /* ===============================
+     REEL MEDIA
+  ================================ */
+  /* ===============================
+     REEL FLAG (Trending / New)
+  ================================ */
+  /* ===============================
+     RIGHT ACTIONS
+  ================================ */
+  /* Like animation */
+  /* Comment glow */
+  /* ===============================
+     BOTTOM INFO
+  ================================ */
+  /* ===============================
+     SAFE AREA FOR MOBILE
+  ================================ */
 }
-
-/* ===============================
-   REEL MEDIA
-================================ */
-.reel-media {
+.reel .reel-media {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-/* ===============================
-   REEL FLAG (Trending / New)
-================================ */
-.reel-flag {
+.reel .reel-flag {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -1795,23 +1804,16 @@ textarea {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
 }
-
-.reel-flag.trending {
+.reel .reel-flag.trending {
   background: linear-gradient(135deg, #ff0057, #ff8a00);
 }
-
-.reel-flag.featured {
+.reel .reel-flag.featured {
   background: linear-gradient(135deg, #7b2ff7, #f107a3);
 }
-
-.reel-flag.new {
+.reel .reel-flag.new {
   background: linear-gradient(135deg, #00c6ff, #0072ff);
 }
-
-/* ===============================
-   RIGHT ACTIONS
-================================ */
-.reel-actions {
+.reel .reel-actions {
   position: absolute;
   right: 12px;
   bottom: 140px;
@@ -1820,8 +1822,7 @@ textarea {
   gap: 18px;
   z-index: 10;
 }
-
-.action-pill {
+.reel .action-pill {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1829,21 +1830,16 @@ textarea {
   color: #fff;
   cursor: pointer;
 }
-
-.action-pill i {
+.reel .action-pill i {
   font-size: 22px;
   margin-bottom: 4px;
 }
-
-/* Like animation */
-.action-pill.like i {
+.reel .action-pill.like i {
   color: #ff3b5c;
 }
-
-.action-pill.like.pulse i {
+.reel .action-pill.like.pulse i {
   animation: pulse 1.5s infinite;
 }
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -1855,16 +1851,11 @@ textarea {
     transform: scale(1);
   }
 }
-/* Comment glow */
-.action-pill.comment.glow i {
+.reel .action-pill.comment.glow i {
   color: #ffffff;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
-
-/* ===============================
-   BOTTOM INFO
-================================ */
-.reel-info {
+.reel .reel-info {
   position: absolute;
   left: 14px;
   bottom: 80px;
@@ -1872,22 +1863,19 @@ textarea {
   width: calc(100% - 100px);
   z-index: 10;
 }
-
-.user-row {
+.reel .user-row {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 6px;
 }
-
-.reel-avatar {
+.reel .reel-avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
-
-.follow-btn {
+.reel .follow-btn {
   font-size: 11px;
   padding: 2px 10px;
   border-radius: 20px;
@@ -1896,19 +1884,14 @@ textarea {
   margin-left: auto;
   font-weight: 600;
 }
-
-.reel-info p {
+.reel .reel-info p {
   font-size: 13px;
   line-height: 1.3;
   margin: 0;
   opacity: 0.95;
 }
-
-/* ===============================
-   SAFE AREA FOR MOBILE
-================================ */
 @media (max-width: 576px) {
-  .reel-info {
+  .reel .reel-info {
     bottom: 90px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1768,9 +1768,8 @@ textarea {
     scroll-snap-align: start;
     overflow: hidden;
     background: #000;
-}
 
-/* ===============================
+    /* ===============================
    REEL MEDIA
 ================================ */
 .reel-media {
@@ -1782,6 +1781,7 @@ textarea {
 /* ===============================
    REEL FLAG (Trending / New)
 ================================ */
+
 .reel-flag {
     position: absolute;
     top: 16px;
@@ -1906,3 +1906,6 @@ textarea {
         bottom: 90px;
     }
 }
+
+}
+

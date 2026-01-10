@@ -1552,67 +1552,64 @@ textarea {
 }
 
 
-.seller-toggle {
+.mini-toggle {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-    font-size: 12px;
+    gap: 6px;
+    font-size: 11px;
     font-weight: 500;
+    justify-content: center;
 }
 
 /* Switch */
-.switch {
+.mini-switch {
     position: relative;
-    display: inline-block;
-    width: 42px;
-    height: 22px;
+    width: 32px;
+    height: 16px;
 }
 
-.switch input {
+.mini-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.slider {
+.mini-slider {
     position: absolute;
-    cursor: pointer;
     inset: 0;
-    background-color: #ddd;
-    border-radius: 50px;
-    transition: 0.3s;
+    background: #ccc;
+    border-radius: 20px;
+    transition: 0.25s;
 }
 
-.slider:before {
-    position: absolute;
+.mini-slider::before {
     content: "";
-    height: 16px;
-    width: 16px;
-    left: 3px;
-    bottom: 3px;
-    background-color: #fff;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    top: 2px;
+    background: #fff;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
-/* Checked = I'M IN */
-input:checked + .slider {
-    background-color: #BB30EB;
+/* Active */
+.mini-switch input:checked + .mini-slider {
+    background: #BB30EB;
 }
 
-input:checked + .slider:before {
-    transform: translateX(20px);
+.mini-switch input:checked + .mini-slider::before {
+    transform: translateX(16px);
 }
 
-/* Status text */
-.status-text {
-    font-size: 12px;
-    opacity: 0.5;
+/* Labels */
+.mini-label {
+    opacity: 0.4;
+    transition: 0.25s;
 }
 
-.status-text.in.active,
-.status-text.out.active {
+.mini-label.active {
     opacity: 1;
     color: #BB30EB;
     font-weight: 600;

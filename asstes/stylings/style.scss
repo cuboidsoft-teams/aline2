@@ -1670,6 +1670,7 @@ textarea {
 }
 
 /* CHAT BUBBLES */
+
 .chat-bubble{
     max-width:75%;
     padding:12px 14px;
@@ -1750,3 +1751,93 @@ textarea {
     height:42px;
 }
 
+/* CONTAINER */
+.reels-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background: #000;
+    padding-bottom: 90px; /* 👈 FIXED BOTTOM MENU SPACE */
+}
+
+/* EACH REEL */
+.reel {
+    position: relative;
+    height: calc(100vh - 90px);
+    scroll-snap-align: start;
+}
+
+/* MEDIA */
+.reel-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ACTION BUTTONS */
+.reel-actions {
+    position: absolute;
+    right: 12px;
+    bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.action-pill {
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    padding: 10px 12px;
+    color: #fff;
+    text-align: center;
+    min-width: 52px;
+}
+
+.action-pill i {
+    font-size: 20px;
+}
+
+.action-pill span {
+    display: block;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* Bottom Info */
+.reel-info {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    right: 90px;
+    color: #fff;
+}
+
+/* User Row */
+.user-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reel-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.follow-btn {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: #BB30EB;
+    margin-left: 6px;
+}
+
+/* Caption */
+.reel-info p {
+    font-size: 12px;
+    line-height: 1.3;
+    margin-top: 6px;
+}

@@ -29,84 +29,84 @@
 <body>
     <div class="top-playground top-0 position-sticky bg-white">
 
-       <header class="profile-header">
-    <div class="profile-header-inner d-flex align-items-center justify-content-between">
+        <header class="profile-header">
+            <div class="profile-header-inner d-flex align-items-center justify-content-between">
 
-        <!-- LEFT -->
-        <div class="d-flex align-items-center gap-2">
+                <!-- LEFT -->
+                <div class="d-flex align-items-center gap-2">
 
-            <button class="icon-btn">
-                <a href="profile.html" class="text-dark">
-                    <i class="bi bi-arrow-left"></i>
-                </a>
-            </button>
+                    <button class="icon-btn">
+                        <a href="profile.html" class="text-dark">
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+                    </button>
 
-            <div class="profile-title">
+                    <div class="profile-title">
 
-                <h6 class="mb-0 fw-semibold">
-                    Rohit Sharma
-                    <i class="bi bi-patch-check-fill text-primary"></i>
-                </h6>
+                        <h6 class="mb-0 fw-semibold">
+                            Rohit Sharma
+                            <i class="bi bi-patch-check-fill text-primary"></i>
+                        </h6>
 
-                <!-- VERIFIED SELLER BADGE -->
-                <small class="text-muted d-flex align-items-center gap-1"
-                       style="font-size:11px;">
-                    <i class="bi bi-shield-check"
-                       style="color:#BB30EB;"></i>
-                    He is a verified seller
-                </small>
+                        <!-- VERIFIED SELLER BADGE -->
+                        <small class="text-muted d-flex align-items-center gap-1" style="font-size:11px;">
+                            <i class="bi bi-shield-check" style="color:#BB30EB;"></i>
+                            He is a verified seller
+                        </small>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Search -->
+                    <button class="icon-btn">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+                    <!-- Chat Menu -->
+                    <div class="dropdown">
+                        <button class="icon-btn" data-bs-toggle="dropdown">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end mobile-menu shadow border-0">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-trash me-2"></i> Clear chat
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-image me-2"></i> Wallpaper
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-bell-slash me-2"></i> Mute notifications
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-archive me-2"></i> Archive chat
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <i class="bi bi-slash-circle me-2"></i> Block contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
 
             </div>
-        </div>
-
-        <!-- RIGHT -->
-        <div class="d-flex align-items-center gap-2">
-
-            <!-- Search -->
-            <button class="icon-btn">
-                <i class="bi bi-search"></i>
-            </button>
-
-            <!-- Chat Menu -->
-            <div class="dropdown">
-                <button class="icon-btn" data-bs-toggle="dropdown">
-                    <i class="bi bi-three-dots-vertical"></i>
-                </button>
-
-                <ul class="dropdown-menu dropdown-menu-end mobile-menu shadow border-0">
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <i class="bi bi-trash me-2"></i> Clear chat
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <i class="bi bi-image me-2"></i> Wallpaper
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <i class="bi bi-bell-slash me-2"></i> Mute notifications
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            <i class="bi bi-archive me-2"></i> Archive chat
-                        </a>
-                    </li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li>
-                        <a class="dropdown-item text-danger" href="#">
-                            <i class="bi bi-slash-circle me-2"></i> Block contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-</header>
+        </header>
 
 
     </div>
@@ -169,74 +169,65 @@
 
         <!-- INPUT BOX -->
         <!-- INPUT BOX -->
-<div class="chat-input d-flex align-items-center">
-    <button class="btn icon-btn">
-        <i class="bi bi-plus"></i>
-    </button>
+        <div class="chat-input d-flex align-items-center">
+            <button class="btn icon-btn">
+                <i class="bi bi-plus"></i>
+            </button>
 
-    <input type="text"
-           class="form-control mx-2"
-           placeholder="Ok great, Let me ask around"
-           disabled>
+            <input type="text" class="form-control mx-2" placeholder="Ok great, Let me ask around" disabled>
 
-    <button class="btn send-btn"
-            data-bs-toggle="modal"
-            data-bs-target="#premiumChatModal">
-        <i class="bi bi-send-fill"></i>
-    </button>
-</div>
+            <button class="btn send-btn" data-bs-toggle="modal" data-bs-target="#premiumChatModal">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
 
 
     </div>
 
 
 
-<!-- PREMIUM CHAT MODAL -->
-<div class="modal fade" id="premiumChatModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-        <div class="modal-content border-0 shadow-lg rounded-4">
+    <!-- PREMIUM CHAT MODAL -->
+    <div class="modal fade" id="premiumChatModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content border-0 shadow-lg rounded-4">
 
-            <div class="modal-body text-center p-4">
+                <div class="modal-body text-center p-4">
 
-                <div class="mb-3">
-                    <i class="bi bi-lock-fill"
-                       style="font-size:28px;color:#BB30EB;"></i>
+                    <div class="mb-3">
+                        <i class="bi bi-lock-fill" style="font-size:28px;color:#BB30EB;"></i>
+                    </div>
+
+                    <h6 class="fw-semibold mb-2">
+                        Premium Chat
+                    </h6>
+
+                    <p class="small text-muted mb-4">
+                        This is a premium chat.<br>
+                        Please buy a subscription to continue messaging.
+                    </p>
+
+                    <button class="btn w-100 text-white mb-2" style="background:#BB30EB;border-radius:12px;">
+                        Buy Subscription
+                    </button>
+
+                    <button class="btn btn-light w-100" data-bs-dismiss="modal" style="border-radius:12px;">
+                        Cancel
+                    </button>
+
                 </div>
 
-                <h6 class="fw-semibold mb-2">
-                    Premium Chat
-                </h6>
-
-                <p class="small text-muted mb-4">
-                    This is a premium chat.<br>
-                    Please buy a subscription to continue messaging.
-                </p>
-
-                <button class="btn w-100 text-white mb-2"
-                        style="background:#BB30EB;border-radius:12px;">
-                    Buy Subscription
-                </button>
-
-                <button class="btn btn-light w-100"
-                        data-bs-dismiss="modal"
-                        style="border-radius:12px;">
-                    Cancel
-                </button>
-
             </div>
-
         </div>
     </div>
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var premiumModal = new bootstrap.Modal(
-            document.getElementById('premiumChatModal')
-        );
-        premiumModal.show();
-    });
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var premiumModal = new bootstrap.Modal(
+                document.getElementById('premiumChatModal')
+            );
+            premiumModal.show();
+        });
+    </script>
 
     <script src="./asstes/js/bottomsheet.js"></script>
     <script src="./asstes/js/likebtn.js"></script>

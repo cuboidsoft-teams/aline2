@@ -1750,23 +1750,28 @@ textarea {
   height: 42px;
 }
 
-/* CONTAINER */
+/* ===============================
+   REELS CONTAINER
+================================ */
 .reels-container {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
   background: #000;
-  padding-bottom: 90px; /* 👈 FIXED BOTTOM MENU SPACE */
+  padding-bottom: 70px; /* fixed bottom menu space */
 }
 
-/* EACH REEL */
 .reel {
   position: relative;
-  height: calc(100vh - 90px);
+  height: 100vh;
   scroll-snap-align: start;
+  overflow: hidden;
+  background: #000;
 }
 
-/* MEDIA */
+/* ===============================
+   REEL MEDIA
+================================ */
 .reel-media {
   width: 100%;
   height: 100%;
@@ -1774,51 +1779,105 @@ textarea {
      object-fit: cover;
 }
 
-/* ACTION BUTTONS */
+/* ===============================
+   REEL FLAG (Trending / New)
+================================ */
+.reel-flag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 20px;
+  z-index: 10;
+  color: #fff;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.reel-flag.trending {
+  background: linear-gradient(135deg, #ff0057, #ff8a00);
+}
+
+.reel-flag.featured {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+}
+
+.reel-flag.new {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+/* ===============================
+   RIGHT ACTIONS
+================================ */
 .reel-actions {
   position: absolute;
   right: 12px;
   bottom: 140px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+  z-index: 10;
 }
 
 .action-pill {
-  background: rgba(0, 0, 0, 0.55);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-  border-radius: 30px;
-  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
   color: #fff;
-  text-align: center;
-  min-width: 52px;
+  cursor: pointer;
 }
 
 .action-pill i {
-  font-size: 20px;
+  font-size: 22px;
+  margin-bottom: 4px;
 }
 
-.action-pill span {
-  display: block;
-  font-size: 11px;
-  margin-top: 2px;
+/* Like animation */
+.action-pill.like i {
+  color: #ff3b5c;
 }
 
-/* Bottom Info */
+.action-pill.like.pulse i {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Comment glow */
+.action-pill.comment.glow i {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* ===============================
+   BOTTOM INFO
+================================ */
 .reel-info {
   position: absolute;
-  bottom: 30px;
-  left: 15px;
-  right: 90px;
+  left: 14px;
+  bottom: 80px;
   color: #fff;
+  width: calc(100% - 100px);
+  z-index: 10;
 }
 
-/* User Row */
 .user-row {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 6px;
 }
 
 .reel-avatar {
@@ -1830,15 +1889,26 @@ textarea {
 
 .follow-btn {
   font-size: 11px;
-  padding: 3px 10px;
-  border-radius: 12px;
+  padding: 2px 10px;
+  border-radius: 20px;
   background: #BB30EB;
-  margin-left: 6px;
+  color: #fff;
+  margin-left: auto;
+  font-weight: 600;
 }
 
-/* Caption */
 .reel-info p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.3;
-  margin-top: 6px;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* ===============================
+   SAFE AREA FOR MOBILE
+================================ */
+@media (max-width: 576px) {
+  .reel-info {
+    bottom: 90px;
+  }
 }/*# sourceMappingURL=style.css.map */

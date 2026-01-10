@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:#cfcfcf;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.auth-screen{
+    width:360px;
+    height:720px;
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    position:relative;
+}
+
+/* Header */
+.auth-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.back-btn{
+    border:none;
+    background:#f4f4f4;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+}
+
+.time{
+    font-size:14px;
+    font-weight:500;
+}
+
+/* Title */
+h2{
+    font-size:22px;
+    font-weight:600;
+}
+
+.subtitle{
+    font-size:13px;
+    color:#777;
+    margin:10px 0 20px;
+}
+
+/* Tabs */
+.auth-tabs{
+    display:flex;
+    background:#f4f4f4;
+    border-radius:30px;
+    padding:4px;
+    margin-bottom:20px;
+}
+
+.tab{
+    flex:1;
+    border:none;
+    background:transparent;
+    padding:10px;
+    font-size:14px;
+    border-radius:30px;
+}
+
+.tab.active{
+    background:#BB30EB;
+    color:#fff;
+}
+
+/* Inputs */
+.auth-form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.input-group{
+    display:flex;
+    align-items:center;
+    background:#f6f6f6;
+    padding:12px 14px;
+    border-radius:14px;
+    font-size:14px;
+}
+
+.input-group i{
+    margin-right:10px;
+    color:#999;
+}
+
+.input-group input{
+    border:none;
+    background:transparent;
+    outline:none;
+    width:100%;
+}
+
+.eye{
+    margin-left:auto;
+}
+
+/* Button */
+.primary-btn{
+    background:#BB30EB;
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:30px;
+    font-size:15px;
+    margin-top:10px;
+}
+
+/* Divider */
+.divider{
+    text-align:center;
+    font-size:12px;
+    color:#777;
+    margin:14px 0;
+}
+
+/* Social buttons */
+.social-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:#f4f4f4;
+    padding:12px;
+    border-radius:14px;
+    font-size:14px;
+}
+
+.social-btn img{
+    width:18px;
+}
+
+.apple{
+    background:#000;
+    color:#fff;
+}
+
+.facebook{
+    background:#1877F2;
+    color:#fff;
+}

@@ -46,7 +46,7 @@
                                                     <i class="bi bi-chevron-down mb-0"></i> </small>
                                             </span>
                                         </a>
-                                        <a href="#" class="d-flex align-items-center nav-link">
+                                        <a href="filter.html" class="d-flex align-items-center nav-link">
                                             <span
                                                 class="aline-bg-primary-2 rounded-pill text-light badge fw-light small myd-0"><small>
                                                     <i class="bi bi-sliders"></i></small>
@@ -69,6 +69,8 @@
                 </div>
             </div>
         </header>
+
+
 
         <div class="stories-wrapper pt-0">
             <!-- Your Story -->
@@ -737,12 +739,25 @@
             ❤️ 🙌 🔥 👏 😢 😍 😮 😂
         </div>
 
-        <!-- Input -->
-        <div class="sheet-footer">
-            <img src="https://i.pravatar.cc/35?img=5" class="comment-avatar">
-            <input type="text" placeholder="Add a comment…">
-            <button class="post-btn">Post</button>
-        </div>
+      <div class="sheet-footer">
+    <img src="https://i.pravatar.cc/35?img=5" class="comment-avatar">
+
+    <input type="text" placeholder="Add a comment…" id="commentInput">
+
+    <!-- Voice Button -->
+    <button class="voice-btn" id="voiceBtn">
+        <i class="bi bi-mic-fill"></i>
+    </button>
+
+    <button class="post-btn">Post</button>
+</div>
+
+<!-- Voice Preview -->
+<div class="voice-preview d-none" id="voicePreview">
+    <audio controls id="audioPlayer"></audio>
+    <span id="recordTime">0:00</span>
+</div>
+
 
     </div>
 
@@ -815,6 +830,54 @@
 
     </div>
 
+<!-- NEARBY BOTTOM SHEET -->
+<div class="nearby-sheet" id="nearbySheet">
+
+  <!-- Drag Handle -->
+  <div class="nearby-handle"></div>
+
+  <h5 class="text-center fw-semibold mb-3">Nearby</h5>
+
+  <!-- PERSON / SELLER -->
+  <div class="nearby-toggle">
+    <button class="nearby-toggle-btn active" data-type="person">Person</button>
+    <button class="nearby-toggle-btn" data-type="seller">Seller</button>
+  </div>
+
+  <!-- LOCATION -->
+  <div class="nearby-group">
+    <label class="nearby-label">Location</label>
+    <div class="nearby-location-box">
+      <i class="bi bi-geo-alt"></i>
+      <span id="nearbyLocationText">Fetching current location...</span>
+    </div>
+  </div>
+
+  <!-- AGE -->
+  <div class="nearby-group">
+    <div class="d-flex justify-content-between">
+      <label class="nearby-label">Age</label>
+      <span id="nearbyAgeValue">26</span>
+    </div>
+    <input type="range" min="18" max="60" value="26" id="nearbyAgeRange">
+  </div>
+
+  <!-- DISTANCE -->
+  <div class="nearby-group">
+    <div class="d-flex justify-content-between">
+      <label class="nearby-label">Distance (km)</label>
+      <span id="nearbyDistanceValue">10</span>
+    </div>
+    <input type="range" min="1" max="100" value="10" id="nearbyDistanceRange">
+  </div>
+
+  <!-- APPLY -->
+  <button class="nearby-apply-btn">Apply</button>
+
+</div>
+
+<!-- BACKDROP -->
+<div class="nearby-backdrop" id="nearbyBackdrop"></div>
 
 
 
@@ -927,6 +990,106 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
 });
 </script>
+<script>
+const nearbySheet = document.getElementById("nearbySheet");
+const nearbyBackdrop = document.getElementById("nearbyBackdrop");
+
+/* NEARBY BUTTON (header badge) */
+const nearbyBtn = document.querySelector(".bi-geo-alt").closest("a");
+
+nearbyBtn.onclick = (e) => {
+  e.preventDefault();
+  nearbySheet.classList.add("active");
+  nearbyBackdrop.classList.add("active");
+};
+
+nearbyBackdrop.onclick = () => {
+  nearbySheet.classList.remove("active");
+  nearbyBackdrop.classList.remove("active");
+};
+
+/* TOGGLE */
+document.querySelectorAll(".nearby-toggle-btn").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".nearby-toggle-btn")
+      .forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  };
+});
+
+/* RANGE VALUES */
+nearbyAgeRange.oninput = () =>
+  nearbyAgeValue.textContent = nearbyAgeRange.value;
+
+nearbyDistanceRange.oninput = () =>
+  nearbyDistanceValue.textContent = nearbyDistanceRange.value;
+
+/* LOCATION FETCH */
+const nearbyLocationText = document.getElementById("nearbyLocationText");
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(pos => {
+    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`)
+      .then(res => res.json())
+      .then(data => {
+        nearbyLocationText.textContent =
+          data.address.city ||
+          data.address.town ||
+          data.address.state ||
+          "Current Location";
+      });
+  }, () => {
+    nearbyLocationText.textContent = "Location permission denied";
+  });
+}
+</script>
+
+<script>
+let mediaRecorder;
+let audioChunks = [];
+let isRecording = false;
+let startTime;
+let timerInterval;
+
+const voiceBtn = document.getElementById("voiceBtn");
+const audioPlayer = document.getElementById("audioPlayer");
+const voicePreview = document.getElementById("voicePreview");
+const recordTime = document.getElementById("recordTime");
+
+voiceBtn.addEventListener("click", async () => {
+  if (!isRecording) {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    audioChunks = [];
+
+    mediaRecorder.start();
+    startTime = Date.now();
+    timerInterval = setInterval(updateTimer, 1000);
+
+    mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+    mediaRecorder.onstop = () => {
+      const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+      const audioUrl = URL.createObjectURL(audioBlob);
+      audioPlayer.src = audioUrl;
+      voicePreview.classList.remove("d-none");
+    };
+
+    voiceBtn.classList.add("recording");
+    isRecording = true;
+  } else {
+    mediaRecorder.stop();
+    clearInterval(timerInterval);
+    voiceBtn.classList.remove("recording");
+    isRecording = false;
+  }
+});
+
+function updateTimer() {
+  const seconds = Math.floor((Date.now() - startTime) / 1000);
+  recordTime.textContent = `0:${seconds < 10 ? "0" + seconds : seconds}`;
+}
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 

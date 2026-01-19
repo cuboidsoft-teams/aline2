@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aline2</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="asstes/stylings/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body class="seller-area">
+    <div class="top-playground top-0 position-sticky">
+        <header class="profile-header">
+            <div class="profile-header-inner">
+
+                <!-- Back -->
+                <a href="index.html" class="icon-btn">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+
+                <!-- Profile Info -->
+                <div class="profile-title">
+                    <h5 class="mb-0">Search & Filter</h5>
+                </div>
+
+                <!-- Settings -->
+                <button class="icon-btn">
+                    <i class="bi bi-gear"></i>
+                </button>
+
+            </div>
+        </header>
+    </div>
+
+    <div class="search-bar">
+        <i class="bi bi-search"></i>
+        <input type="text" id="searchInput" placeholder="Search people or sellers...">
+    </div>
+
+    <div class="filter-bar">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="male">Male</button>
+        <button class="filter-chip" data-filter="female">Female</button>
+        <button class="filter-chip" data-filter="online">Online</button>
+        <button class="filter-chip" data-filter="seller">Best Seller</button>
+    </div>
+
+    <div class="featured-section">
+        <h6 class="section-title px-3">Featured Sellers</h6>
+
+        <div class="featured-scroll">
+
+            <!-- SELLER CARD -->
+            <a href="seller-view-profile.html" class="text-decoration-none text-dark">
+                <div class="post-card gold-shiny featured-card">
+
+                    <div class="post-header position-relative">
+
+                        <!-- Seller Ribbon (already used) -->
+                        <img src="https://static.vecteezy.com/system/resources/previews/010/251/736/non_2x/best-seller-red-ribbon-illustration-free-png.png"
+                            class="seller position-absolute" style="width: 158px;">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://i.pravatar.cc/100?img=12" class="avatar">
+
+                            <div>
+                                <strong>@dr_rajmalhotra</strong>
+                                <i class="bi bi-patch-check-fill text-primary ms-1"></i>
+
+                                <div class="post-meta">
+                                    <small class="text-warning">He is a Seller</small>
+                                </div>
+
+                                <div class="post-meta">
+                                    <i class="bi bi-heart-pulse"></i> General Physician
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Same connect class -->
+                        <span class="connect nav-link text-dark">
+                            <i class="bi bi-chat-dots"></i> Connect
+                        </span>
+                    </div>
+
+                </div>
+            </a>
+
+            <!-- SELLER CARD -->
+            <a href="seller-view-profile.html" class="text-decoration-none text-dark">
+                <div class="post-card gold-shiny featured-card">
+
+                    <div class="post-header position-relative">
+                        <img src="https://static.vecteezy.com/system/resources/previews/010/251/736/non_2x/best-seller-red-ribbon-illustration-free-png.png"
+                            class="seller position-absolute" style="width: 158px;">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="https://i.pravatar.cc/100?img=45" class="avatar">
+
+                            <div>
+                                <strong>@astro_ananya</strong>
+                                <i class="bi bi-patch-check-fill text-primary ms-1"></i>
+
+                                <div class="post-meta">
+                                    <small class="text-warning">Best Seller</small>
+                                </div>
+
+                                <div class="post-meta">
+                                    <i class="bi bi-stars"></i> Astrology
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="connect nav-link text-dark">
+                            <i class="bi bi-chat-dots"></i> Connect
+                        </span>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+
+
+    <div class="profile-list">
+
+        <!-- USER -->
+        <div class="profile-row" data-type="male online">
+            <img src="https://i.pravatar.cc/100?img=11">
+            <div class="profile-info">
+                <h4>Rohit Sharma</h4>
+                <p>Fitness Enthusiast</p>
+            </div>
+            <button class="btn-follow">Follow</button>
+        </div>
+
+        <!-- SELLER -->
+        <div class="profile-row seller" data-type="seller online">
+            <img src="https://i.pravatar.cc/100?img=13">
+            <div class="profile-info">
+                <h4>Seller Hub</h4>
+                <span class="seller-badge">He is a Seller</span>
+                <p>Electronics Store</p>
+            </div>
+            <button class="btn-connect">Connect</button>
+        </div>
+
+        <!-- FEMALE USER -->
+        <div class="profile-row" data-type="female">
+            <img src="https://i.pravatar.cc/100?img=22">
+            <div class="profile-info">
+                <h4>Neha Verma</h4>
+                <p>UI Designer</p>
+            </div>
+            <button class="btn-follow">Follow</button>
+        </div>
+
+        <!-- SELLER -->
+        <div class="profile-row seller" data-type="seller">
+            <img src="https://i.pravatar.cc/100?img=33">
+            <div class="profile-info">
+                <h4>Aditya Store</h4>
+                <span class="seller-badge">He is a Seller</span>
+                <p>Clothing Brand</p>
+            </div>
+            <button class="btn-connect">Connect</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="bottom-nav">
+        <a class="nav-item" href="index.html"><i class="bi bi-house"></i></a>
+        <a class="nav-item" href="reels.html"><i class="bi bi-play-circle"></i></a>
+
+        <a class="nav-item" href="#" onclick="openPostOptions()">
+            <i class="bi bi-plus-lg"></i>
+        </a>
+
+        <a class="nav-item" href="chat.html"><i class="bi bi-chat-dots"></i></a>
+        <a class="nav-item profile" href="profile.html">
+            <img src="https://i.pravatar.cc/40" alt="profile">
+        </a>
+    </div>
+
+    <input type="file" id="galleryInput" accept="image/*,video/*" hidden>
+
+
+    <!-- Hidden File Input -->
+    <input type="file" id="galleryInput" accept="image/*,video/*" style="display:none">
+
+    <div class="post-modal" id="postModal">
+        <div class="modal-content">
+            <div class="handle"></div>
+
+            <div class="option" onclick="selectType('reels')">
+                <i class="bi bi-play-circle"></i>
+                <div>
+                    <h6>Reels</h6>
+                    <p>Share video moment with your followers.</p>
+                </div>
+            </div>
+
+            <div class="option" onclick="selectType('story')">
+                <i class="bi bi-clock-history"></i>
+                <div>
+                    <h6>Story</h6>
+                    <p>Share content that disappears after 24 hours.</p>
+                </div>
+            </div>
+
+            <div class="option" onclick="selectType('post')">
+                <i class="bi bi-image"></i>
+                <div>
+                    <h6>Post</h6>
+                    <p>Share moment with your followers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="create-post-screen" id="createPost">
+
+        <!-- Header -->
+        <div class="cp-header">
+            <span onclick="closeCreatePost()">✕</span>
+            <span class="title title ms-5 fw-bold">Create Post</span>
+            <button class="post-btn disabled" id="postBtn">Post</button>
+        </div>
+
+        <!-- User -->
+        <div class="cp-user">
+            <img src="https://i.pravatar.cc/100?img=32">
+            <span>
+                Martin Kenter
+                <i class="bi bi-patch-check-fill"></i>
+            </span>
+        </div>
+
+        <!-- Text -->
+        <textarea placeholder="What do you want to talk about?" oninput="enablePostBtn(this)"></textarea>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Add to your post -->
+        <div class="add-post">
+            <p>Add to your post</p>
+
+            <div class="add-grid">
+                <div class="add-card">
+                    <i class="bi bi-image text-primary"></i>
+                    <span>Photo/Video</span>
+                    <b>+</b>
+                </div>
+
+                <div class="add-card">
+                    <i class="bi bi-filetype-gif text-info"></i>
+                    <span>Gif</span>
+                    <b>+</b>
+                </div>
+
+                <div class="add-card">
+                    <i class="bi bi-bar-chart text-success"></i>
+                    <span>Poll</span>
+                    <b>+</b>
+                </div>
+
+                <div class="add-card">
+                    <i class="bi bi-heart-fill text-danger"></i>
+                    <span>Adoption</span>
+                    <b>+</b>
+                </div>
+
+                <div class="add-card">
+                    <i class="bi bi-megaphone text-warning"></i>
+                    <span>Lost Notice</span>
+                    <b>+</b>
+                </div>
+
+                <div class="add-card">
+                    <i class="bi bi-calendar-event text-purple"></i>
+                    <span>Event</span>
+                    <b>+</b>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./asstes/js/bottomsheet.js"></script>
+    <script src="./asstes/js/likebtn.js"></script>
+    <script>
+        function openPostOptions() {
+            document.getElementById('postModal').classList.add('show');
+        }
+
+        function selectType(type) {
+            console.log("Selected:", type);
+
+            document.getElementById('postModal').classList.remove('show');
+
+            // Open gallery AFTER selecting type
+            document.getElementById('galleryInput').click();
+        }
+
+        // Close modal on outside click
+        document.getElementById('postModal').addEventListener('click', e => {
+            if (e.target.classList.contains('post-modal')) {
+                e.target.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        function selectType(type) {
+            document.getElementById('postModal').classList.remove('show');
+
+            if (type === 'post') {
+                document.getElementById('createPost').classList.add('show');
+            }
+        }
+
+        function closeCreatePost() {
+            document.getElementById('createPost').classList.remove('show');
+        }
+
+        function enablePostBtn(el) {
+            const btn = document.getElementById('postBtn');
+            if (el.value.trim().length > 0) {
+                btn.classList.remove('disabled');
+            } else {
+                btn.classList.add('disabled');
+            }
+        }
+    </script>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const cards = document.querySelectorAll(".profile-row");
+        const filters = document.querySelectorAll(".filter-chip");
+
+        let activeFilter = "all";
+
+        filters.forEach(btn => {
+            btn.onclick = () => {
+                filters.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                activeFilter = btn.dataset.filter;
+                applyFilters();
+            };
+        });
+
+        searchInput.addEventListener("input", applyFilters);
+
+        function applyFilters() {
+            const search = searchInput.value.toLowerCase();
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                const type = card.dataset.type;
+
+                const matchSearch = text.includes(search);
+                const matchFilter = activeFilter === "all" || type.includes(activeFilter);
+
+                card.style.display = matchSearch && matchFilter ? "flex" : "none";
+            });
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

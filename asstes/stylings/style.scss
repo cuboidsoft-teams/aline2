@@ -23,6 +23,17 @@ body {
     background-color: #7178F4 !important
 }
 
+.align-bg-gred{
+    background: linear-gradient(135deg, #a855f7c4, #6366f1e6)
+}
+
+.bg-banner{
+    background-image: url("../images/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .bell-icon {
     font-size: 30px;
 }

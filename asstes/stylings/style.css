@@ -24,6 +24,17 @@ body {
   background-color: #7178F4 !important;
 }
 
+.align-bg-gred {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.768627451), rgba(99, 102, 241, 0.9019607843));
+}
+
+.bg-banner {
+  background-image: url("../images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bell-icon {
   font-size: 30px;
 }

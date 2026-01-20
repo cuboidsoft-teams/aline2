@@ -2095,6 +2095,9 @@ textarea {
      object-fit: cover;
 }
 
+.widgets a.seller-shield {
+  background-color: transparent;
+}
 .widgets a {
   background: rgba(187, 48, 235, 0.4117647059);
   padding: 5px 2px;
